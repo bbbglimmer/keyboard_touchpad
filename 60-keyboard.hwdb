@@ -1,0 +1,16 @@
+# usb/blue keyboard bind
+evdev:input:b0003v*
+ KEYBOARD_KEY_70029=capslock
+ KEYBOARD_KEY_70039=esc
+
+# laptop keyboard bind
+evdev:atkbd:dmi:*
+ KEYBOARD_KEY_01=capslock
+ KEYBOARD_KEY_3a=esc
+
+# udevadm hwdb --update
+# udevadm trigger
+# for test
+# udevadm info /dev/input/event3
+# udevadm --debug test  /devices/platform/i8042/serio0/input/input0/event3
+# udevadm --debug test-builtin keyboard /devices/platform/i8042/serio0/input/input0/event3
